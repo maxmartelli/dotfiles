@@ -26,7 +26,7 @@ My config is based on the `LazyVim` distribution.
 Clone the repo into your `~/.config/` directory:
 ```
 cd ~/.config
-git clone git clone https://github.com/maxmartelli/dotfiles
+git clone https://github.com/maxmartelli/dotfiles
 ```
 
 Then, in `~/.config/`, create simlinks to the relevant files and directories of `~/.config/dotfiles/`:
