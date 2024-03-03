@@ -31,7 +31,7 @@ git clone https://github.com/maxmartelli/dotfiles
 
 Then, in `~/.config/`, create simlinks to the relevant files and directories of `~/.config/dotfiles/`:
 ```
-ln -s dotfiles/starship.toml starship.toml
-ln -s dotfiles/nvim nvim
+ln -s ~/.config/dotfiles/starship.toml ~/.config/starship.toml
+ln -s ~/.config/dotfiles/nvim ~/.config/nvim
 ```
 
