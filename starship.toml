@@ -1,0 +1,97 @@
+format = """
+${custom.stduser}\
+${custom.rootuser}\
+$hostname\
+[](bg:#4d2db7 fg:#004400)\
+$directory\
+[](fg:#4d2db7 bg:#9d44c0)\
+$git_branch\
+$git_status\
+[](fg:#9d44c0 bg:#9a3b3b)\
+$nodejs\
+[](fg:#9a3b3b bg:#ff9b50)\
+$docker_context\
+[](fg:#ff9b50)
+$status
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+[directory]
+style = "bg:#4d2db7"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style) $path'
+
+[git_branch]
+symbol = ""
+style = "bg:#9d44c0"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#9d44c0"
+format = '[$all_status$ahead_behind ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#9a3b3b"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
+
+[status]
+style = ""
+#symbol = '✗💀🔴🔺❌ '
+#symbol = '❌'
+#symbol = '[❯](bold red)'
+symbol = '[](bold red)'
+#success_symbol = '🟢'
+#success_symbol = '[❯](bold green)'
+success_symbol = '[](bold green)'
+#format = '[ \($int\) $symbol]($style) '
+#format = '[](fg:#eeeeee)[\($int\)](bg:#eeeeee fg:#0000ff)[](fg:#eeeeee)[ $symbol]($style) '
+format = '[](fg:#eeeeee)[$int](bg:#eeeeee fg:#0000ff)[](fg:#eeeeee)[ $symbol]($style) '
+map_symbol = false
+disabled = false
+
+[hostname]
+ssh_only = false
+#format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+format = '[ $ssh_symbol$hostname ](bg:#004400)'
+trim_at = '.companyname.com'
+disabled = false
+
+[custom.stduser]
+#when = ''' test "$USER" = "max" '''
+when = ''' test "$USER" != "root" '''
+command = 'echo $USER'
+format = '[](fg:#0e21a0)[$output ](bg:#0e21a0)[](bg:#004400 fg:#0e21a0)'
+
+[custom.rootuser]
+when = ''' test "$USER" = "root" '''
+command = 'echo $USER'
+format = '[](fg:#ff0000)[$output ](bg:#ff0000)[](bg:#004400 fg:#ff0000)'
+
