@@ -1,5 +1,5 @@
 # dotfiles
-These are my config files (a.k.a.) dotfiles for:
+These are my config files (a.k.a. dotfiles) for:
 
 ## Starship
 The `Starship` cross-shell prompt.
