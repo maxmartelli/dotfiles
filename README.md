@@ -11,7 +11,7 @@ The `Neovim` text editor.
 
 [https://neovim.io/](https://neovim.io/)
 
-My config is based on the LazyVim distribution.
+My config is based on the `LazyVim` distribution.
 
 [http://www.lazyvim.org/](http://www.lazyvim.org/)
 
