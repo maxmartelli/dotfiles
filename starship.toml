@@ -64,28 +64,19 @@ format = '[ ♥ $time ]($style)'
 
 [status]
 style = ""
-#symbol = '✗💀🔴🔺❌ '
-#symbol = '❌'
-#symbol = '[❯](bold red)'
 symbol = '[](bold red)'
-#success_symbol = '🟢'
-#success_symbol = '[❯](bold green)'
 success_symbol = '[](bold green)'
-#format = '[ \($int\) $symbol]($style) '
-#format = '[](fg:#eeeeee)[\($int\)](bg:#eeeeee fg:#0000ff)[](fg:#eeeeee)[ $symbol]($style) '
 format = '[](fg:#eeeeee)[$int](bg:#eeeeee fg:#0000ff)[](fg:#eeeeee)[ $symbol]($style) '
 map_symbol = false
 disabled = false
 
 [hostname]
 ssh_only = false
-#format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
 format = '[ $ssh_symbol$hostname ](bg:#004400)'
 trim_at = '.companyname.com'
 disabled = false
 
 [custom.stduser]
-#when = ''' test "$USER" = "max" '''
 when = ''' test "$USER" != "root" '''
 command = 'echo $USER'
 format = '[](fg:#0e21a0)[$output ](bg:#0e21a0)[](bg:#004400 fg:#0e21a0)'
