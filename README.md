@@ -15,6 +15,9 @@ The `Neovim` text editor: [https://neovim.io/](https://neovim.io/)
 
 My config is based on the `LazyVim` distribution: [http://www.lazyvim.org/](http://www.lazyvim.org/)
 
+### tmux
+The `tmux` terminal multiplexer: [https://github.com/tmux/tmux](https://github.com/tmux/tmux)
+
 
 ## Installation
 Clone the repo into your `~/.config/` directory:
@@ -28,5 +31,8 @@ Then, create simlinks to the relevant files and directories of `~/.config/dotfil
 cd ~/.config
 ln -s dotfiles/starship.toml starship.toml
 ln -s dotfiles/nvim nvim
+
+cd
+ls -s dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
