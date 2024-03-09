@@ -3,6 +3,7 @@
 These are my config files (a.k.a. dotfiles) for some terminal applications in Linux:
 - `Starship`
 - `Neovim`
+- `tmux`
 
 
 ## List of applications
@@ -33,6 +34,6 @@ ln -s dotfiles/starship.toml starship.toml
 ln -s dotfiles/nvim nvim
 
 cd
-ls -s dotfiles/tmux/tmux.conf .tmux.conf
+ls -s .config/dotfiles/tmux/tmux.conf .tmux.conf
 ```
 
