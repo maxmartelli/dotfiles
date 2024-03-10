@@ -11,6 +11,7 @@ These are my config files (a.k.a. dotfiles) for some terminal applications in Li
 
 ### Neovim
 The `Neovim` text editor: [https://neovim.io/](https://neovim.io/)
+
 My config is based on the `LazyVim` distribution: [http://www.lazyvim.org/](http://www.lazyvim.org/)
 ### ranger 
 The `ranger` file manager: [https://github.com/ranger/ranger](https://github.com/ranger/ranger)
