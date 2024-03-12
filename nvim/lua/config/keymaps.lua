@@ -26,4 +26,9 @@ if (useItalianKeyboardHacks) then
 	vim.keymap.set("n", "<leader>ù1", "i`", { desc = "Insert special character: `" })
 	vim.keymap.set("n", "<leader>ù2", "i~", { desc = "Insert special character: ~" })
 	vim.keymap.set("n", "<leader>ù0", "i改善", { desc = "Insert special characters: 改善" })
+
+	-- Append "special" characters (not available on Italian keyboards)
+	vim.keymap.set("n", "<leader>à1", "a`", { desc = "Append special character: `" })
+	vim.keymap.set("n", "<leader>à2", "a~", { desc = "Append special character: ~" })
+	vim.keymap.set("n", "<leader>à0", "a改善", { desc = "Append special characters: 改善" })
 end
