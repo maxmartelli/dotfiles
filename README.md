@@ -30,14 +30,24 @@ cd ~/.config
 git clone https://github.com/maxmartelli/dotfiles
 ```
 
-Then, create simlinks to the relevant files and directories of `~/.config/dotfiles/`:
+Then, `cd` into the `dotfiles` directory:
 ```
-cd ~/.config
-ln -s dotfiles/nvim nvim
-ln -s dotfiles/ranger ranger
-ln -s dotfiles/starship.toml starship.toml
+cd dotfiles
+```
+make the install script `install.sh` executable:
+```
+chmod +x ./install.sh
+```
+and launch it:
+```
+./install.sh
+```
 
-cd
-ls -s .config/dotfiles/tmux/tmux.conf .tmux.conf
-```
+The script will backup the already existing config files/directories and it will create the following symlinks to the relevant files/directories of `~/.config/dotfiles/`:
+- In the `~/.config` directory:
+	- `nvim --> dotfiles/nvim`
+	- `ranger --> dotfiles/ranger`
+	- `starship.toml --> dotfiles/starship.toml`
+- In the `~` directory:
+	- `.tmux.conf --> .config/dotfiles/tmux/tmux.conf`
 
